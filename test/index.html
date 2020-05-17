@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Simplex-method</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="./style.css">
+
+
+</head>
+
+<body>
+    <div id="inputCount">
+        <p><span>Введите количество переменных</span>
+            <input id="XCount" type="text" value="2" />
+        </p>
+        <p>
+            <span>Введите количество ограничений</span>
+            <input id="FCount" type="text" value="2" />
+
+        </p>
+        <p><button onclick="GetFunction()">Ввод данных для квадратичного симплекс-метода</button></p>
+        <p><button onclick="getLinearFunction()">Ввод данных для решения задачи симплекс-методом</button></p>
+
+    </div>
+    <div id="inputTable">
+
+    </div>
+    <div id="solve">
+
+    </div>
+
+</body>
+<script type="text/javascript" src="index.js"></script>
+
+</html>
