@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="./style/main-style.css" />
+    <title></title>
+</head>
+
+<body style="background-color: rgb(24, 23, 23); color: rgb(204, 204, 204);">
+    <center style="font-size: 22px;">Love Triss Merigold</center>
+   
+    <form class="parameters">
+        <label class="parameters__label">Введите количество переменных
+            <input id="num_var_dom" class="parameters__inputs" value="4" min="1" type="number" /></label>
+        <label class="parameters__label">Введите количество ограничений
+            <input id="num_lim_dom" class="parameters__inputs" value="3" min="1" type="number" />
+        </label>
+        <label class="parameters__label">Вид поиска<label>
+            <input  class="kind_search" name="kind_search" type="radio"  value="min" /> Минимум
+        </label>
+        <label>
+            <input class="kind_search"  name="kind_search" type="radio" checked value="max" /> Максимум</label>
+        </label>
+        <label class="parameters__label">Режим
+            <select id="kind_mode" class="parameters__select" name="" id="">
+                <option  value="auto">Автоматический</option>
+                <option selected  value="steps">Пошаговый</option>
+            </select></label </label> <label class="parameters__label">Способ
+        <select id="kind_method" class="parameters__select" name="" id="">
+            <option  value="basic">Симплекс метод</option>
+            <option selected value="artifical">Метод искусственного базиса</option>
+        </select></label>
+        <label class="parameters__label">Вид дробей
+            <select id="kind_number" class="parameters__select" name="" id="">
+                <option value="decimal">Десятичные дроби</option>
+                <option selected value="ordinary">Обыкновенные дроби</option>
+            </select></label>
+        <label class="parameters__label">Использовать свой базис <input id="use_own_basis" type="checkbox"></label>
+    </form>
+    <h3>Функция:</h3>
+    <table id="function" class="table"></table>
+    <h3>базис:</h3>
+    <table  id="user_basis_area"class="table user_basis_area">
+    </table>
+    <h3>Ограничения:</h3>
+    <table id="limits" class="table"></table>
+    <div id="answer"></div>
+    <div>
+        <input type="button"  id="start_calc" class="operation_inputs" value="Начать подсчет" />
+        <input type="button" id="start_return" class="operation_inputs" value="Вернуть исходную задачу" />
+    </div>
+</body>
+<script src="../dist/script/main.js"></script>
+
+</html>

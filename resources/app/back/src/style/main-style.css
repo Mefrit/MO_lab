@@ -1,0 +1,60 @@
+.table {
+    border: 1px solid rgb(63, 63, 63);
+    padding: 5px;
+}
+
+.table_tr {
+    padding: 5px;
+    border: 1px solid rgb(66, 66, 66);
+}
+
+.operation_inputs {
+    margin-top: 10px;
+    border-radius: 5px;
+    color: rgb(114, 20, 20);
+    background-color: #cecece;
+}
+
+/* границы ячеек первого ряда таблицы */
+/* th {
+    border: 1px solid grey;
+} */
+
+/* границы ячеек тела таблицы */
+td {
+    width: 38px;
+    padding: 5px;
+    border: 1px solid rgb(93, 93, 93);
+}
+
+.parameters__label {
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    float: left;
+}
+
+.parameters__select {
+    width: 150px;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.limits__last {
+    margin-bottom: 5px;
+    margin-top: -12px;
+    float: left;
+}
+
+.parameters__inputs,
+.table__inputs {
+    width: 40px;
+}
+
+.answer__val {
+    color: rgb(126, 24, 24);
+}
+
+.user_basis_area {
+    margin-top: 10px;
+}

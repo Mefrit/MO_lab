@@ -1,0 +1,207 @@
+.table {
+    border: 1px solid rgb(63, 63, 63);
+    padding: 5px;
+}
+body {
+    background-color: rgb(24, 23, 23);
+    color: rgb(204, 204, 204);
+}
+.table_tr {
+    padding: 5px;
+    border: 1px solid rgb(66, 66, 66);
+}
+
+.operation_inputs {
+    margin-top: 10px;
+    border-radius: 5px;
+    color: rgb(114, 20, 20);
+    background-color: #cecece;
+}
+
+/* границы ячеек первого ряда таблицы */
+/* th {
+    border: 1px solid grey;
+} */
+
+/* границы ячеек тела таблицы */
+td {
+    width: 38px;
+    padding: 3px 5px;
+
+    border: 1px solid rgb(93, 93, 93);
+}
+
+.parameters {
+    margin-top: 25px;
+    box-sizing: border-box;
+    padding: 10px;
+    border: 1px solid rgb(158, 158, 158);
+    border-radius: 30px;
+    float: left;
+    width: 45%;
+    max-width: 350px;
+}
+
+.parameters__label {
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    float: left;
+}
+
+.parameters__select {
+    width: 150px;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: #cecece;
+    border: 0px;
+}
+
+.parameters__inputs,
+.table__inputs {
+    width: 40px;
+}
+
+.parameters__inputs_file {
+    width: auto;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.calc_container {
+    box-sizing: border-box;
+    margin-left: 10px;
+    float: left;
+    width: 50%;
+}
+
+.best_support {
+    box-shadow: inset 0px 0px 10px rgba(65, 165, 34, 0.424), 0px 0px 20px rgb(65, 165, 34);
+}
+
+.support {
+    box-shadow: inset 0px 0px 10px rgba(167, 194, 46, 0.424), 0px 0px 20px rgb(167, 194, 46);
+}
+
+.limits__last {
+    margin-bottom: 5px;
+    margin-top: -12px;
+    float: left;
+}
+
+.answer__val {
+    color: rgb(126, 24, 24);
+}
+
+.user_basis_area {
+    margin-top: 10px;
+}
+
+#zatemnenie {
+    background: rgba(95, 95, 95, 0.5);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+}
+
+#okno {
+    width: 600px;
+    overflow: auto;
+    height: 400px;
+    text-align: center;
+    padding: 15px;
+    padding-top: 5px;
+    border: 3px solid #1b1b1b;
+    border-radius: 10px;
+    color: #cecece;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    background: #fff;
+    background-color: rgb(24, 23, 23);
+}
+
+#zatemnenie:target {
+    display: block;
+}
+
+.link_info {
+    text-decoration: none;
+    color: #cecece;
+    margin-right: 10px;
+    border: 1px solid #cecece;
+    border-radius: 5px;
+    padding: 5px 10px;
+
+    float: right;
+}
+
+.close {
+    float: right;
+    display: block;
+    border: 1px solid #53000e;
+    color: #f82b2b;
+    padding: 5px 10px;
+    margin: 10px;
+    text-decoration: none;
+    border-radius: 20px;
+    font-size: 14pt;
+    cursor: pointer;
+}
+
+.close:hover {
+    background: #1b1b1b;
+}
+
+.content_info {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.content_info__image {
+    width: 40%;
+
+    float: left;
+}
+
+.content_info__row {
+    width: 95%;
+    float: left;
+    margin-top: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.content_info__desc {
+    width: 55%;
+    float: left;
+    margin-left: 10px;
+}
+
+.table__equal {
+    float: left;
+    width: auto;
+    margin-right: 5px;
+}
+
+.table__last_ceil {
+    width: auto;
+}
+
+@media all and (max-width: 600px) {
+    .parameters {
+        width: 100%;
+    }
+
+    .calc_container {
+        width: 100%;
+        padding: 10px;
+    }
+}

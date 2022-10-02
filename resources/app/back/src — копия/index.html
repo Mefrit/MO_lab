@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="./style/main-style.css" />
+    <title></title>
+</head>
+
+<body style="background-color: rgb(24, 23, 23); color: rgb(204, 204, 204);">
+    <center style="font-size: 22px;">Калькулятор симплекс метода</center>
+    <a href="#zatemnenie" class="link_info">Справка</a>
+    <div id="zatemnenie">
+        <div id="okno">
+        
+          <a href="#" class="close">X</a>
+          <div class="content_info">
+              <h3>Информация по калькулятору</h3>
+              <div class="content_info__row"><img class="content_info__image" src="./image/6.png" alt=""><p class="content_info__desc">Для выбора режима работы калькулятора, можно использовать следующие кнопки.</p></div>    
+              <div class="content_info__row"><img class="content_info__image" src="./image/3.png" alt=""><p class="content_info__desc">Так же имеется возможость возвращения предыдущих данных вычисления.</p> </div>   
+              <div class="content_info__row"><img class="content_info__image" src="./image/5.png" alt=""><p class="content_info__desc">При пошаговом режиме самый оптимальный опорный элемент будет отображаться зеленым.</p></div> 
+              <div class="content_info__row"><img class="content_info__image" src="./image/4.png" alt=""><p class="content_info__desc">Остальные возможные элементы будут отображаться золотистым цветом.</p></div> 
+              <div class="content_info__row"><img class="content_info__image" src="./image/1.png" alt=""><p class="content_info__desc">Имеется возможность самостоятельно задать базис ( желательно использовать автоматический способ, тк возможны комбинации базисных переменных приводящие к неверному ответу).</p></div>    
+              <div class="content_info__row"><img class="content_info__image" src="./image/2.png" alt=""><p class="content_info__desc"> Тут можно указать, те базисные переменные, которые вы желаете видеть базисны.ми</p></div>
+              <div class="content_info__row"><img class="content_info__image" src="./image/7.png" alt=""><p class="content_info__desc">Формат данных файла.</p></div>   
+          
+        </div>
+      </div>
+      </div>
+    <form class="parameters">
+        <label class="parameters__label">Прочитать данные из файла
+            <input id="read_file_inp" class=" parameters__inputs_file" value="Открыть файл" type="button" /></label>
+        <label class="parameters__label">Сохранить данные в файл
+            <input id="save_file_inp" class=" parameters__inputs_file" value="Сохранить данные" type="button" /></label>
+        <label class="parameters__label">Введите количество переменных
+            <input id="num_var_dom" class="parameters__inputs" value="4" min="1" type="number" /></label>
+        <label class="parameters__label">Введите количество ограничений
+            <input id="num_lim_dom" class="parameters__inputs" value="3" min="1" type="number" />
+        </label>
+        <label class="parameters__label">Вид поиска<label>
+                <input class="kind_search" name="kind_search" type="radio" checked value="min" /> Минимум
+            </label>
+            <label>
+                <input class="kind_search" name="kind_search" type="radio" value="max" /> Максимум</label>
+        </label>
+        <label class="parameters__label">Режим
+            <select id="kind_mode" class="parameters__select" name="" id="">
+                <option value="auto">Автоматический</option>
+                <option selected value="steps">Пошаговый</option>
+            </select></label </label> <label class="parameters__label">Способ
+        <select id="kind_method" class="parameters__select" name="" id="">
+            <option selected value="basic">Симплекс метод</option>
+            <option value="artifical">Метод искусственного базиса</option>
+        </select></label>
+        <label class="parameters__label">Вид дробей
+            <select id="kind_number" class="parameters__select" name="" id="">
+                <option value="decimal">Десятичные дроби</option>
+                <option selected value="ordinary">Обыкновенные дроби</option>
+            </select></label>
+        <label class="parameters__label">Использовать свой базис <input id="use_own_basis" type="checkbox"></label>
+    </form>
+    <div class="calc_container">
+        <h3>Коэфиценты функции:</h3>
+        <table id="function" class="table"></table>
+        <h3>Базис:</h3>
+        <table id="user_basis_area" class="table user_basis_area">
+        </table>
+        <h3>Коэфиценты граничений</h3>
+        <table id="limits" class="table"></table>
+        <div id="answer"></div>
+        <div>
+            <input type="button" id="start_calc" class="operation_inputs" value="Начать подсчет" />
+            <input type="button" id="start_return" class="operation_inputs" value="Назад" />
+        </div>
+    </div>
+</body>
+<script src="../dist/script/main.js"></script>
+<script>
+    // const {dialog} = require('electron');
+    //     const fs = require('fs'); 
+    //     const {dialog} = require('electron').remote;
+    //     let function_data,table;
+
+    // document.getElementById("read_file_inp").addEventListener("click", () => {
+    //   console.log("clisk");
+
+    //     dialog.showOpenDialog({
+    //             properties: ['openFile', 'multiSelections']
+    //         },  (file_names) =>{
+    //             if (file_names !== undefined) {
+    //                 fs.readFile(file_names[0], "utf-8", (err, data) => {
+    //                     if (err) {
+    //                         console.log("Error ", err);
+    //                     }
+    //                     console.log(data);
+    //                     data =  data.split("/")
+    //                     function_data = data[0];
+    //                     table = data[1];
+    //                 });
+    //             }
+    //         });
+    // });
+</script>
+
+</html>

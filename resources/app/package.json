@@ -1,0 +1,44 @@
+{
+  "name": "mo_lab",
+  "productName": "mo_lab",
+  "version": "1.0.0",
+  "description": "My Electron application description",
+  "main": "es6-shim.js",
+  "scripts": {
+    "start": "electron-forge start",
+    "dev": "webpack --watch",
+    "package": "electron-forge package",
+    "make": "electron-forge make",
+    "publish": "electron-forge publish",
+    "lint": "eslint src --color"
+  },
+  "keywords": [],
+  "author": "Fokin",
+  "license": "MIT",
+  "config": {},
+  "dependencies": {
+    "electron": "^9.0.3",
+    "electron-compile": "^6.4.4",
+    "electron-squirrel-startup": "^1.0.0",
+    "fs": "0.0.1-security"
+  },
+  "devDependencies": {
+    "awesome-typescript-loader": "^5.2.1",
+    "babel-plugin-transform-async-to-generator": "^6.24.1",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "electron-forge": "^5.2.4",
+    "electron-prebuilt-compile": "4.0.0",
+    "eslint": "^3.19.0",
+    "eslint-config-airbnb": "^15.1.0",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-jsx-a11y": "^5.1.1",
+    "eslint-plugin-react": "^7.19.0",
+    "less-loader": "^5.0.0",
+    "typescript": "^3.8.3",
+    "webpack": "^4.42.1",
+    "webpack-cli": "^3.3.11",
+    "webpack-node-externals": "^1.7.2"
+  },
+  "originalMain": "src/index.js"
+}
